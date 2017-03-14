@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="hangman.js"></script>
+<style type="text/css">
+body {
+  background-image: url("wall.jpg");
+}
+
+#Game {
+  background-color: #efefef;
+	width: 850px;
+	border: 15px solid #444;
+  height: 500px;
+  margin: 0px auto;
+  margin-top: 20px;
+  font-family: helvetica, arial;
+  font-size: 13px;
+}
+
+#Inputs {
+  width: 150px;
+  border-right: 1px solid #444;
+  float: left;
+  height: 310px;
+  padding: 20px;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+#Gamestate {
+  position: absolute;
+  margin: auto;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+
+#Hangman{
+  position: absolute;
+  margin: auto;
+  margin-top: 0px;
+  margin-left: 600px;
+}
+
+</style>
+</head>
+<body onload="startGame()">
+  <div id="Game">
+    <p><b>Hangman</b></p>
+    <div id="inputs">
+      <table>
+        <tr>
+          <b>Try letter or full word<b>
+        </tr>
+        <tr>
+          <td><input id="try" type="text" name="tried" size="5"></td>
+          <td><input type="button" onclick="gameControl()" name="sendLetter" value="Try"></td>
+        </tr>
+      </table>
+    </div>
+    <div id="Hangman">
+      <img id="hangmanImage" src="0.jpg" ></image>
+    </div>
+  </div>
+
+</body>
+</html>
